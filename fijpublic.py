@@ -30,6 +30,9 @@ async def on_message(message):
      if message.author == client.user:
         return
 
+     #Status
+     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.playing, name="fortnite | fij help"))
+
      #Most of the stuff here you can just delete as 
      #it's mostly just random unneeded shit, but it's
      #too iconic for fij so i'm gonna leave it here
@@ -71,14 +74,14 @@ class Warnn(commands.Converter):
 async def ban (ctx, member:discord.User=None, reason =None):
     banner = ctx.author
     if member == None or member == ctx.message.author:
-        await ctx.channel.send("lol you can't ban yourself stupid idot stupid ahhahahhaahah")
+        await ctx.channel.send("Sorry, but you can't ban yourself " + banner)
         return
     if reason == None:
         reason = "for no reason"
     message = f"You have been banned from {ctx.guild.name} for {reason}"
     await member.send(message)
     await ctx.guild.ban(member, reason=reason)
-    await ctx.channel.send(f"{member} is banned by " + banner.mention + " for " + reason + "! lol imagine")
+    await ctx.channel.send(f"{member} has been banned by " + banner.mention + " for " + reason)
 
 
 #Kick command
@@ -87,14 +90,14 @@ async def ban (ctx, member:discord.User=None, reason =None):
 async def kick (ctx, member:discord.User=None, reason =None):
     banner = ctx.author
     if member == None or member == ctx.message.author:
-        await ctx.channel.send("lol you can't ban yourself stupid idot stupid ahhahahhaahah")
+        await ctx.channel.send("Sorry, but you can't kick yourself " + banner)
         return
     if reason == None:
         reason = "for no reason."
     message = f"You have been kicked from {ctx.guild.name} for {reason}"
     await member.send(message)
     await ctx.guild.kick(member, reason=reason)
-    await ctx.channel.send(f"{member} has been kicked by " + banner.mention + " for " + reason + "! lol imagine")
+    await ctx.channel.send(f"{member} has been kicked by " + banner.mention + " for " + reason)
 
 
 #Purge command
@@ -177,7 +180,10 @@ async def subreddit(ctx, theSubreddit):
     else:
        await ctx.send("You cannot use the subreddit command in non NSFW channels.")
 
-
+#Help command
+@client.command()
+async def help(ctx):
+     await ctx.send("**Hello, I am Fij. These are some of the commands you can do:** \n\n **Admin/Mod Commands:** \n fij **ban** (*user*): Ban a user. Must have the ban member permission. \n fij **kick** (*user*): Kicks a user. Must have the kick member permission. \n fij **mute** (*user*): Mutes a user. Must have the  manage message permission. \n fij **purge** (*amount*): Deletes amount of messages specified in a channel. \n\n **Other commands:** \n fij **subreddit** (*subreddit*): Gets a random post from a subreddit. \n\n **I also have some commands you can randomly activate.**")
 
 #ERRORS
 @subreddit.error
