@@ -46,11 +46,6 @@ async def on_message(message):
      if("swag") == message.content:
          await message.channel.send("<:swag:838324542967119883>") #swag emote lol (it's a cat)    
     
-     if("channel check") == message.content:
-         if message.channel.is_nsfw():
-             await message.channel.send("true")
-         else:
-             await message.channel.send("false")
 
 #Classes for mute and warn
 class Mutee(commands.Converter):
