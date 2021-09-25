@@ -1,5 +1,6 @@
-# fij
+# Fij
 A discord bot made with discord.py.
+
 ![Fij](assets/logo-lq.jpg)
 
 Fij is currently in a beta state. Use at your own risk.
