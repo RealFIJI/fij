@@ -7,8 +7,8 @@ import random
 import asyncpraw
 
 
-reddit = asyncpraw.Reddit(client_id = "ID",
-                     client_secret = "SECRET",
+reddit = asyncpraw.Reddit(client_id = "CLIENT_ID",
+                     client_secret = "CLIENT_SECRET",
                      username = "USERNAME",
                      password = "PASSWORD",
                      user_agent = "USER_AGENT")
