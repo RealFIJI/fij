@@ -1,7 +1,7 @@
 # Fij
 A discord bot made with discord.py.
 
-![Fij](assets/logo-lq.jpg)
+![Fij](assets/logo-out-lq.jpg)
 
 You may use Fij on your Discord server by using [this link](https://discord.com/api/oauth2/authorize?client_id=768995826604179517&permissions=8&scope=bot) and inviting Fij to your server.
 
