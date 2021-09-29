@@ -16,8 +16,8 @@ bot.remove_command('help')
 
 @bot.event
 async def on_ready():
-    # Print "We have logged in" when Fij is ready
-    print('We have logged in.'.format(bot))
+    # Print "Fij has logged in" when Fij is ready
+    print('Fij has logged in.'.format(bot))
 
     # Status
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.playing, name="fortnite | fij help"))
