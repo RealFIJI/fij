@@ -4,7 +4,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot, Cog, bot
 from discord.ext.commands.core import command
 
-client = commands.Bot (command_prefix = 'fij ')
+# client = commands.Bot (command_prefix = 'fij ')
 
 class Listeners(Cog):
 
@@ -36,5 +36,5 @@ class Listeners(Cog):
 
 
 # Setup the cog for the bot
-def setup(bot: Bot) -> None:
-    bot.add_cog(Listeners(bot))
+async def setup(bot: Bot) -> None:
+    await bot.add_cog(Listeners(bot))

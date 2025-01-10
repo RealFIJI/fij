@@ -19,5 +19,5 @@ class Say(Cog):
 
 
 # Setup the cog for the bot
-def setup(bot: Bot) -> None:
-    bot.add_cog(Say(bot))
+async def setup(bot: Bot) -> None:
+    await bot.add_cog(Say(bot))
