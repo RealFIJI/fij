@@ -4,7 +4,8 @@ from discord.ext import commands
 from discord.ext.commands import Bot, Cog, bot
 from discord.ext.commands.core import command
 
-# client = commands.Bot (command_prefix = 'fij ')
+import random
+
 
 class Listeners(Cog):
 
@@ -26,11 +27,18 @@ class Listeners(Cog):
         #Yeah, I just have to use if statements here. 
         #Theres no way to do this with commands sadly 
         #(at least i think)
-        if("p") == message.content:
+        if("p") == message.content.lower():
             await message.channel.send("p")
 
-        if("swag") == message.content:
-            await message.channel.send("<:swag:838324542967119883>") #swag emote lol (it's a cat)    
+        if("loge") in message.content.lower():
+            await message.channel.send("<:loge:1327795593359130644>") #loge emote lol (it's a loge)
+
+        if("gug") in message.content.lower():
+            await message.channel.send("<:gug:1327798433347801098>") #gug emote lol (it's a gug)
+
+        if("fij") == message.content.lower():
+            responses = ("hi", "hello", "bob?", "erm...", "lock me in", "hi litte jodiac", "tatjanagmeiner.com", "liiiive on beam", "that's me")
+            await message.channel.send(random.choice(responses))
 
 
 

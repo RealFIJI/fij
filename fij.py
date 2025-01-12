@@ -23,8 +23,10 @@ bot.remove_command('help')
 async def on_ready():
     await load_cogs()
 
+    await bot.tree.sync()
+
     # Print "Fij has logged in" when Fij is ready
-    print('Fij has logged in.'.format(bot))
+    print("\n\nFij has logged in.".format(bot))
 
     # Status
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.playing, name="fortnite | fij help"))
@@ -54,4 +56,4 @@ async def on_error(event, *args, **kwargs):
 
 
 if __name__ == "__main__":
-    bot.run('TOKEN')
+    bot.run('SECRET')
