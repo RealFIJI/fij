@@ -19,10 +19,11 @@ class Warn(Cog):
     async def warn_error(self, ctx, error):
         await ctx.channel.send(error)
 
-    @app_commands.command(name="warn", description="Warns someone for a give reason. Doesn't do much, just sends a message saying you warned the person.")
+    @app_commands.command(name="warn", description="Warns someone for a given reason. Doesn't do much, just sends a message saying you warned the person.")
     @app_commands.describe(member="The user to warn", reason="Warn reason")
     async def slash_warn(self, interaction: discord.Interaction, member: discord.User, reason: str = None):
         await interaction.response.send_message(f"{interaction.user.mention} has warned {member.mention} for: **{reason or 'No reason provided.'}**")
+
 
 
 

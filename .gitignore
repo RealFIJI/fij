@@ -2,3 +2,4 @@ venv
 cogs/__pycache__
 .idea
 releases
+util/__pycache__
