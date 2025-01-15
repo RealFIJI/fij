@@ -2,14 +2,14 @@ from discord.ext import commands
 from discord.ext.commands import Bot, Cog
 
 from openai import OpenAI
-from util import _generate
+from util import generate
 
 
 class Talk(Cog):
     def __init__(self, bot):
         self.bot = bot
 
-        self.generator = _generate.Generate()
+        self.generator = generate.Generate()
 
 
     @commands.command()
